@@ -1,0 +1,383 @@
+/* From bootstrap-ub.css */
+
+/* Different file/dir structure on Mirage than on standard bootstrap from iportal.
+   Change from "../fonts/" to "fonts/" */
+/*
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('fonts/glyphicons-halflings-regular.eot');
+  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+*/
+
+body {
+	font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.navbar {
+    min-height: 100px;
+}
+
+.navbar-default {
+    box-shadow: none;
+}
+
+.navbar-toggle {
+    margin-top: 5px;
+}
+
+.navbar-brand {
+    height: 100px;
+}
+
+h5,
+.h5, 
+h6, 
+.h6 {
+    color: #333;
+}
+
+h5, 
+.h5 {
+    font-weight: 600;
+}
+
+.checkbox label {
+    display: block;
+}
+
+.radio label {
+    display: block;
+}
+
+.breadcrumb {
+    background-color: #ffffff;
+    margin-bottom: 0px;
+}
+
+.page-header {
+    margin-top: 20px;
+}
+
+/* From dspace-bootstrap-tweaks.css */
+
+header .navbar-brand img {
+  height: 100px;
+}
+
+/* These styles are originally from classic-mirage-style.css */
+
+/* Sidebar tweaks  */
+#main-container #sidebar {
+  /*background-color: #f7f7f7;*/
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+  #main-container .active #sidebar {
+    padding-bottom: 99999px;
+    margin-bottom: -99979px;
+  }
+}
+#main-container .horizontal-slider {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #main-container .horizontal-slider #sidebar {
+    -webkit-box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.05);
+    border-right: 1px solid #e5e5e5;
+  }
+}
+
+/* community-browser */
+.community-browser-row {
+    padding-top: 3px;
+    padding-bottom: 3px;
+	font-size: 16px;
+}
+
+.community-browser-row p.toggler-wrap {
+  margin-bottom: 0;
+}
+
+
+.ds-option-set {
+  margin-bottom: 15px;
+}
+
+#ds-options .ds-option-set-head {
+    
+    /*color: #999999;*/
+    color: #003a4c;
+    /*text-transform: uppercase;*/
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    
+    
+
+    /* 
+    background-image: linear-gradient(to bottom, #00617f 0px, #004459 100%);
+    background-repeat: repeat-x;
+    border-color: #004459;
+    text-shadow: 0 -1px 0 #003a4c;
+    background-color: #00617f;
+    border-color: #00617f;
+    color: #fff;
+    z-index: 2;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    margin-bottom: 5px;
+    */
+}
+
+/* The following styles/ids are defined in the source code, but not in any exixting style sheets*/
+
+.ds-file-field {
+    height: auto;
+}
+
+a.toggler {
+    padding: 0px 5px;
+}
+
+/* Hide login from right menu */
+#aspect_viewArtifacts_Navigation_list_account {
+    display: none;
+}
+
+/* Hide search box on community home page */
+#aspect_discovery_CommunitySearch_div_community-search {
+    display: none;
+}
+
+/* Hide search box on collection home page */
+#aspect_discovery_CollectionSearch_div_collection-search {
+    display: none;
+}
+
+/* Adjustment of padding/margin on front page */
+.community-list {
+    padding-left: 0px;
+}
+
+#aspect_discovery_SiteRecentSubmissions_div_site-home ul.list{
+    margin-left: 0px;
+}
+
+/* More space between files in full item view */
+.file-list .row {
+    margin-bottom: 5px;
+}
+
+.file-metadata dt {
+    text-align: left;
+    width: 100px;
+}
+
+.file-metadata dd {
+    margin-left: 100px;
+}
+
+/* Added styles */
+
+h4.list,
+h5.list {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+ul.list {
+    margin-left: 10px;
+}
+
+.footer-wrap {
+    background-color: #eae7e3;
+    margin-top: 15px;
+}
+
+.logo-bottom {
+    padding-bottom: 12px;
+    padding-top: 12px;
+    width: 80px;
+}
+
+#designedby {
+    padding: 5px;
+}
+
+#footer_feedback {
+    padding-top: 12px;
+    font-size: 13px;
+}
+
+/* Navbar background */
+@media (max-width: 767px) {
+    .navbar-background {
+	background: url('../images/munin-banner-background_300.png') no-repeat;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-background{
+	background: url('../images/munin-banner-background_400.png') no-repeat;
+	width: 354px;
+    }
+}
+
+.navbar-claret {
+    vertical-align: top;
+    padding-left: 5px;
+}
+
+/* Capitalize word*/
+.capitalize {
+    text-transform: capitalize;
+}
+
+/* Language selection flag */
+.flag {
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+/* Login info text */
+.login-info {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.normal {
+    color: #333;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+a.front-page-list {
+    font-size: 1.2em;
+}
+
+/* Submission box */
+.submission-box {
+    margin-bottom: 20px;
+}
+
+.submission-box .big {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.submission-box .small {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.submission-box .list-group-item {
+    padding: 10px 15px 18px 15px;
+}
+
+/*
+.submission-box .list-group-item {
+    background-image: linear-gradient(to bottom, #f2a900 0px, #de7c00 100%);
+    border-color: #de7c00;
+    padding: 10px 15px 18px;
+    text-shadow: 0 -1px 0 #c56300;
+*/
+
+/* Share buttons */
+.share-buttons {
+    margin: 0px auto 20px auto;
+    text-align: center;
+}
+
+.breadcrumb-border {
+    border-bottom: 1px solid #00617f;
+    margin-bottom: 10px;
+}
+
+/* Adjustment of padding/margin on front page */
+.new-doctoral-theses {
+    padding-left: 0px;
+}
+
+/* Hide Statcounter link and counter */
+.statcounter {
+	    display: none;
+}
+
+#impact-altmetric {
+/*    float:right;*/
+    margin:30px 0 30px 0;
+}
+
+#impact-plumx {
+    float:right;
+}
+
+/* Thumbnail view */
+.thumbnail {
+	border: 0;
+	padding: 0;
+}
+
+.thumbnail, .img-thumbnail {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.thumbnail > img, .thumbnail a > img {
+	margin-left: 0;
+	margin-right: 0;
+	border: 1px solid #ddd;
+}
+
+h4 {
+	line-height: 1.3;
+}
+
+h4.artifact-title {
+	font-size: 18px;
+	margin-bottom: 10px;
+	line-height: 1.3;
+}
+
+div.artifact-abstract {
+	font-size: 16px;
+	margin-top: 5px;
+	padding-bottom: 20px;
+}
+
+div.abstract {
+	margin-top: 5px;
+	padding-bottom: 20px;
+	font-size: 16px;
+}
+
+#aspect_artifactbrowser_CommunityViewer_div_community-view h4.artifact-title {
+	font-size: 16px;
+}

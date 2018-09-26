@@ -1,0 +1,26 @@
+# Item Archived email message
+#
+# {0}  Title of submission
+# {1}  Name of collection
+# {2}  handle 
+#
+Subject: Munin: Oppgaven lagt ut / Thesis available 
+
+Du leverte inn / You submitted: 
+{0}
+
+til samlingen / to the collection: 
+{1}
+
+Din innlevering har blitt godkjent og arkivert i Munin, 
+og den har fått følgende nettadresse:
+Your submission has been accepted and archived in Munin,
+and it has been assigned the following address: 
+{2}
+
+Bruk denne identifikatoren når du senere vil henvise til det innleverte dokumentet.
+Please use this identifier when citing your submission.
+
+Mange takk! / Many thanks!
+
+Munin

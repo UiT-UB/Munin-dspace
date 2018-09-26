@@ -1,0 +1,23 @@
+# Workflow task email message
+#
+# {0}  Title of submission
+# {1}  Name of collection
+# {2}  submitter's name
+# {3}  Description of task
+# {4}  link to 'my DSpace' page 
+#
+Subject: Ny oppgave i Munin
+
+Et nytt dokument har blitt levert inn:
+
+Tittel:		{0}
+Samling:	{1}
+Lagt inn av:	{2}
+
+Det innlagte dokumentet må kontrolleres før det innlemmes i arkivet.
+
+For å ta denne oppgaven, besøk din "Mitt Munin"-side: {4}
+
+Mange takk!
+
+Munin

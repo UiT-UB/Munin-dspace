@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document xmlns="http://di.tamu.edu/DRI/1.0/" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" version="1.1">
+
+<!-- Kommenter ut neste linje hvis det skal vises nyheter på forsida. Fjern kommentarer på neste linje hvis det ikke skal vises nyheter. -->
+<body/>
+
+<!-- Fjern kommentarer på <body>-linjene under hvis det skal vises nyheter på forsida.  Kommenter ut <body>-linjene hvis det ikke skal vises nyheter. -->
+
+<!--
+<body>
+<div id="file.news.div.news" n="news" rend="primary">
+<head>Oppgradering av server / Upgrade of server</head>
+<p>På grunn av oppgradering av server vil Munin bli sperret for innlogging fra klokken 11:00, mandag 13. januar.</p>
+<p>Arbeidet er forventet å være ferdig i løpet av dagen.</p>
+<p> ------- </p>
+<p>On Monday, 13th January from 11:00, you will be blocked from logging into Munin, due to an upgrade of the server hosting Munin.</p>
+<p>The work is expected to be completed during the day.</p>
+</div>
+</body>
+-->
+
+<options/>
+<meta>
+<userMeta/>
+<pageMeta/>
+<repositoryMeta/>
+</meta>
+</document>
