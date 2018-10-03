@@ -116,6 +116,9 @@
                                     var $this = $(this);
                                     var inputFieldName = vocabularyDialog.find('input[type="hidden"][name="metadataFieldName"]').val();
                                     $('input[name="' + inputFieldName + '"]').val($this.attr('href'));
+									//KM: Add English value to a hidden field
+									var postfix = $('input[type="hidden"][name="eng-subject-postfix"]').val();
+									$('input[name="' + inputFieldName + '_' + postfix + '"]').val($this.attr('eng'));
 
                                     //Close the current dialog
                                     vocabularyDialog.modal('hide');
@@ -179,6 +182,8 @@
 
         var link = document.createElement('a');
         link.setAttribute('href', data.value);
+		//KM: Add English value attribute
+		link.setAttribute('eng', data.valueEng);
         link.setAttribute('class', 'vocabulary-label');
         //Also store a to lower cased value of our label in the link, this will be used for filtering
         link.setAttribute('filter', data.value.toLowerCase());

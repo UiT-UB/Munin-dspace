@@ -33,12 +33,21 @@ public class ControlledVocabulary {
     private String id;
     private String label;
     private String value;
+	//KMS: Add english value
+	private String valueEng;
+	//KME
     private List<ControlledVocabulary> childNodes;
 
-    public ControlledVocabulary(String id, String label, String value, List<ControlledVocabulary> childNodes) {
+	//KMS: Add English value parameter
+    //public ControlledVocabulary(String id, String label, String value, List<ControlledVocabulary> childNodes) {
+    public ControlledVocabulary(String id, String label, String value, String valueEng, List<ControlledVocabulary> childNodes) {
+	//KME
         this.id = id;
         this.label = label;
         this.value = value;
+		//KMS: Add english value
+		this.valueEng = valueEng;
+		//KME
         this.childNodes = childNodes;
     }
 
@@ -62,10 +71,13 @@ public class ControlledVocabulary {
         if(controlledVocFile.exists()){
             DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             Document document = builder.parse(controlledVocFile);
-            return loadVocabularyNode(XPathAPI.selectSingleNode(document, "node"), "");
+			//KMS: Add extra parameter for English value
+            //return loadVocabularyNode(XPathAPI.selectSingleNode(document, "node"), "");
+            return loadVocabularyNode(XPathAPI.selectSingleNode(document, "node"), "", "");
+			//KME
         }else{
             return null;
-        }
+		   }
 
     }
 
@@ -73,10 +85,14 @@ public class ControlledVocabulary {
      * Loads a single node & all its child nodes recursively
      * @param node The current node that we need to parse
      * @param initialValue the value of parent node
+     * @param initialValueEng the English value of parent node
      * @return a vocabulary node with all its children
      * @throws TransformerException should something go wrong with loading the xml
      */
-    private static ControlledVocabulary loadVocabularyNode(Node node, String initialValue) throws TransformerException {
+	//KMS: Add extra parameter for English value
+    //private static ControlledVocabulary loadVocabularyNode(Node node, String initialValue) throws TransformerException {
+    private static ControlledVocabulary loadVocabularyNode(Node node, String initialValue, String initialValueEng) throws TransformerException {
+	//KME
         Node idNode = node.getAttributes().getNamedItem("id");
         String id = null;
         if(idNode != null){
@@ -87,20 +103,38 @@ public class ControlledVocabulary {
         if(labelNode != null){
             label = labelNode.getNodeValue();
         }
+		//KMS: Add English label
+        Node labelEngNode = node.getAttributes().getNamedItem("labeleng");
+        String labelEng = null;
+        if(labelEngNode != null){
+            labelEng = labelEngNode.getNodeValue();
+        }
+		//KME 
+		//KMS: Add English value
         String value;
+		String valueEng;
         if(0 < initialValue.length()){
             value = initialValue + "::" + label;
+			valueEng = initialValueEng + "::" + labelEng;
         }else{
             value = label;
+			valueEng = labelEng;
         }
+		//KME
         NodeList subNodes = XPathAPI.selectNodeList(node, "isComposedBy/node");
 
         List<ControlledVocabulary> subVocabularies = new ArrayList<ControlledVocabulary>(subNodes.getLength());
         for(int i = 0; i < subNodes.getLength(); i++){
-            subVocabularies.add(loadVocabularyNode(subNodes.item(i), value));
+			//KMS: Add English value
+            //subVocabularies.add(loadVocabularyNode(subNodes.item(i), value));
+            subVocabularies.add(loadVocabularyNode(subNodes.item(i), value, valueEng));
+			//KME
         }
         
-        return new ControlledVocabulary(id, label, value, subVocabularies);
+		//KMS: Add English value
+        //return new ControlledVocabulary(id, label, value, subVocabularies);
+        return new ControlledVocabulary(id, label, value, valueEng, subVocabularies);
+		//KME
     }
 
     public String getId() {
@@ -134,4 +168,14 @@ public class ControlledVocabulary {
     public void setValue(String value) {
         this.value = value;
     }
+
+	//KMS: Set and get English values
+    public String getValueEng() {
+        return valueEng;
+    }
+
+    public void setValueEng(String valueEng) {
+        this.valueEng = valueEng;
+    }
+	//KME
 }

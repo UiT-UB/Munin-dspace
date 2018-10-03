@@ -36,6 +36,9 @@ import org.dspace.app.xmlui.wing.element.Radio;
 import org.dspace.app.xmlui.wing.element.Select;
 import org.dspace.app.xmlui.wing.element.Text;
 import org.dspace.app.xmlui.wing.element.TextArea;
+//KMS: Add Hidden
+import org.dspace.app.xmlui.wing.element.Hidden;
+//KME
 import org.dspace.authorize.AuthorizeException;
 import org.dspace.content.Collection;
 import org.dspace.content.DCDate;
@@ -1168,6 +1171,13 @@ public class DescribeStep extends AbstractSubmissionStep
                 //Also hand down the field name so our summoning script knows the field the selected value is to end up in
                 vocabularyUrl += "&metadataFieldName=" + fieldName;
                 item.addXref("vocabulary:" + vocabularyUrl).addContent(T_vocabulary_link);
+
+				//KMS: Add hidden field to contain English vocabulary value
+				Hidden hidden = item.addHidden("dc_subject_" + (dcValues.length+1));
+				// Need to know the number of subject fields already registered so that field containing the English value gets the correct postfix
+				Hidden postfix = item.addHidden("eng-subject-postfix");
+				postfix.setValue(Integer.toString(dcValues.length+1));
+				//KME
             }
             
                 // Setup the select field
