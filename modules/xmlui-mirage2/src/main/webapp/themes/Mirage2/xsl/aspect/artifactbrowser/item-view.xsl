@@ -505,7 +505,7 @@
                 <span>
                     <xsl:for-each select="dim:field[@element='identifier' and @qualifier='citation']">
 		      
-		      <xsl:copy-of select="./node()"/>
+		        <xsl:value-of select="node()" disable-output-escaping="yes"/>
 		      
 		      <xsl:if test="count(following-sibling::dim:field[@element='identifier' and @qualifier='citation']) != 0">
 			<br/>
