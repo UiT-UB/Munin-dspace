@@ -148,6 +148,7 @@
                     <xsl:call-template name="itemSummaryView-DIM-abstract"/>
 		    <xsl:call-template name="itemSummaryView-DIM-description"/>
 			<xsl:call-template name="itemSummaryView-DIM-haspart"/>
+			<xsl:call-template name="itemSummaryView-DIM-ispartof"/>
 		    <xsl:call-template name="itemSummaryView-DIM-publisher"/>
 		    <xsl:call-template name="itemSummaryView-DIM-series"/>
 		    <xsl:call-template name="itemSummaryView-DIM-citation"/>
@@ -433,6 +434,26 @@
 		      <xsl:if test="count(following-sibling::dim:field[@element='type' and not(@qualifier)]) != 0">
 			<br/>
 		      </xsl:if>
+                    </xsl:for-each>
+                </span>
+            </div>
+        </xsl:if>
+    </xsl:template>
+
+    <!-- KM: Added field - dc.relation.ispartof -->
+    <xsl:template name="itemSummaryView-DIM-ispartof">
+        <xsl:if test="dim:field[@element='relation' and @qualifier='ispartof' and descendant::text()]">
+            <div class="simple-item-view-ispartof item-page-field-wrapper table">
+                <h5><i18n:text>xmlui.dri2xhtml.METS-1.0.item-ispartof</i18n:text></h5>
+                <span>
+                    <xsl:for-each select="dim:field[@element='relation' and @qualifier='ispartof']">
+		      
+						<xsl:value-of select="node()" disable-output-escaping="yes"/>
+
+						<xsl:if test="count(following-sibling::dim:field[@element='relation' and @qualifier='ispartof']) != 0">
+							<div class="spacer">&#160;</div>
+		     		    </xsl:if>
+
                     </xsl:for-each>
                 </span>
             </div>

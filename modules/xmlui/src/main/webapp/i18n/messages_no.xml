@@ -2275,6 +2275,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-citation">Sitering</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-editor">Redaktør</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-haspart">Har del(er)</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-ispartof">Er en del av</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-embargo">Fil(er) med begrenset tilgang er under embargo til</message>
 
 	<message key="ub.xmlui.dri2xhtml.METS-1.0.item-month-01">jan</message>
