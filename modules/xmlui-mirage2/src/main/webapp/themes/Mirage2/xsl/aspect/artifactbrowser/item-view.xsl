@@ -147,6 +147,8 @@
 		  <xsl:call-template name="itemSummaryView-DIM-editor"/>
                     <xsl:call-template name="itemSummaryView-DIM-abstract"/>
 		    <xsl:call-template name="itemSummaryView-DIM-description"/>
+			<xsl:call-template name="itemSummaryView-DIM-hasversion"/>
+			<xsl:call-template name="itemSummaryView-DIM-isversionof"/>
 			<xsl:call-template name="itemSummaryView-DIM-haspart"/>
 			<xsl:call-template name="itemSummaryView-DIM-ispartof"/>
 		    <xsl:call-template name="itemSummaryView-DIM-publisher"/>
@@ -434,6 +436,46 @@
 		      <xsl:if test="count(following-sibling::dim:field[@element='type' and not(@qualifier)]) != 0">
 			<br/>
 		      </xsl:if>
+                    </xsl:for-each>
+                </span>
+            </div>
+        </xsl:if>
+    </xsl:template>
+
+    <!-- KM: Added field - dc.relation.isversionof -->
+    <xsl:template name="itemSummaryView-DIM-isversionof">
+        <xsl:if test="dim:field[@element='relation' and @qualifier='isversionof' and descendant::text()]">
+            <div class="simple-item-view-ispartof item-page-field-wrapper table">
+                <h5><i18n:text>xmlui.dri2xhtml.METS-1.0.item-isversionof</i18n:text></h5>
+                <span>
+                    <xsl:for-each select="dim:field[@element='relation' and @qualifier='isversionof']">
+		      
+						<xsl:value-of select="node()" disable-output-escaping="yes"/>
+
+						<xsl:if test="count(following-sibling::dim:field[@element='relation' and @qualifier='isversionof']) != 0">
+							<div class="spacer">&#160;</div>
+		     		    </xsl:if>
+
+                    </xsl:for-each>
+                </span>
+            </div>
+        </xsl:if>
+    </xsl:template>
+
+    <!-- KM: Added field - dc.relation.hasversion -->
+    <xsl:template name="itemSummaryView-DIM-hasversion">
+        <xsl:if test="dim:field[@element='relation' and @qualifier='hasversion' and descendant::text()]">
+            <div class="simple-item-view-haspart item-page-field-wrapper table">
+                <h5><i18n:text>xmlui.dri2xhtml.METS-1.0.item-hasversion</i18n:text></h5>
+                <span>
+                    <xsl:for-each select="dim:field[@element='relation' and @qualifier='hasversion']">
+		      
+						<xsl:value-of select="node()" disable-output-escaping="yes"/>
+
+						<xsl:if test="count(following-sibling::dim:field[@element='relation' and @qualifier='hasversion']) != 0">
+							<div class="spacer">&#160;</div>
+		     		    </xsl:if>
+
                     </xsl:for-each>
                 </span>
             </div>
