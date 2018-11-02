@@ -106,6 +106,10 @@
     <message key="xmlui.Discovery.AbstractSearch.type_type">Avgrens på: Dokumenttype</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Dokumenttype</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type_filter">Dokumenttype</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateAvailable">Publiseringsdato i Munin</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateAvailable_filter">Publiseringsdato i Munin</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.advisor">Veileder</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.advisor_filter">Veileder</message>
 
 
     <message key="xmlui.Discovery.AbstractSearch.startswith">Starter med</message>
@@ -118,6 +122,10 @@
 
     <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.title_sort_asc">Tittel stigende</message>
     <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.date.issued_dt_asc">Dato stigende</message>
+	<!-- KM: Added -->
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.date.available_dt_desc">Publiseringsdato i Munin synkende</message>
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.date.available_dt_asc">Publiseringsdato i Munin stigende</message>
+
 
     <message key="xmlui.Discovery.AbstractSearch.rpp">Treff pr side:</message>
 

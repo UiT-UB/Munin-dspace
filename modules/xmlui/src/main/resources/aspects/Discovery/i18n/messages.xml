@@ -106,8 +106,11 @@
     <message key="xmlui.Discovery.AbstractSearch.type_type">Filter by: Document Type</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Document Type</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type_filter">Document Type</message>
-
-
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateAvailable">Date available in Munin</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateAvailable_filter">Date available in Munin</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.advisor">Supervisor</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.advisor_filter">Supervisor</message>
+		
     <message key="xmlui.Discovery.AbstractSearch.startswith">Starts with</message>
     <message key="xmlui.Discovery.AbstractSearch.startswith.help">Or enter first few letters:</message>
 
@@ -118,6 +121,10 @@
 
     <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.title_sort_asc">Title Asc</message>
     <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.date.issued_dt_asc">Issue Date Asc</message>
+    <!-- KM: Added -->
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.date.available_dt_desc">Date available in Munin Desc</message>
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.date.available_dt_asc">Date available in Munin Asc</message>
+
 
     <message key="xmlui.Discovery.AbstractSearch.rpp">Results Per Page:</message>
 
