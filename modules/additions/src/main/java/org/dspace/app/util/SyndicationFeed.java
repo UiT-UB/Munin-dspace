@@ -112,8 +112,28 @@ public class SyndicationFeed
     // metadata field for Item dc:date field in entry's DCModule (no default)
     private static String dcDateField = ConfigurationManager.getProperty("webui.feed.item.dc.date");
 
+	//KMS: Added fields
     // metadata field for Item dc:author field in entry's DCModule (no default)
     private static String dcDescriptionField = ConfigurationManager.getProperty("webui.feed.item.dc.description");
+
+    // metadata field for Item dc:contributor field in entry's DCModule (no default)
+    private static String dcContributorField = ConfigurationManager.getProperty("webui.feed.item.dc.contributor");
+
+    // metadata field for Item dc:relation field in entry's DCModule (no default)
+    private static String dcRelationField = ConfigurationManager.getProperty("webui.feed.item.dc.relation");
+
+    // metadata field for Item dc:identifier field in entry's DCModule (no default)
+    private static String dcIdentifierField = ConfigurationManager.getProperty("webui.feed.item.dc.identifier");
+
+    // metadata field for Item dc:publisher field in entry's DCModule (no default)
+    private static String dcPublisherField = ConfigurationManager.getProperty("webui.feed.item.dc.publisher");
+
+    // metadata field for Item dc:title field in entry's DCModule (no default)
+    private static String dcTitleField = ConfigurationManager.getProperty("webui.feed.item.dc.title");
+
+    // metadata field for Item dc:type field in entry's DCModule (no default)
+    private static String dcTypeField = ConfigurationManager.getProperty("webui.feed.item.dc.type");
+	//KME
 
     // List of available mimetypes that we'll add to podcast feed. Multiple values separated by commas
     private static String podcastableMIMETypes = getDefaultedConfiguration("webui.feed.podcast.mimetypes", "audio/x-mpeg");
@@ -315,8 +335,11 @@ public class SyndicationFeed
                 }
 
                 // only add DC module if any DC fields are configured
+                //if (dcCreatorField != null || dcDateField != null ||
+                //    dcDescriptionField != null)
                 if (dcCreatorField != null || dcDateField != null ||
-                    dcDescriptionField != null)
+                    dcDescriptionField != null || dcContributorField != null || dcRelationField != null ||
+					dcIdentifierField != null || dcPublisherField != null || dcTitleField != null || dcTypeField != null)
                 {
                     DCModule dc = new DCModuleImpl();
                     if (dcCreatorField != null)
@@ -357,6 +380,90 @@ public class SyndicationFeed
                             dc.setDescription(descs.toString());
                         }
                     }
+					//KMS: Add fields
+                    if (dcContributorField != null)
+                    {
+                        Metadatum dcContributors[] = item.getMetadataByMetadataString(dcContributorField);
+                        if (dcContributors.length > 0)
+                        {
+                            List<String> contributors = new ArrayList<String>();
+                            for (Metadatum contributor : dcContributors)
+                            {
+                                contributors.add(contributor.value);
+                            }
+                            dc.setContributors(contributors);
+                        }
+                    }
+                    if (dcRelationField != null)
+                    {
+                        Metadatum dcRelations[] = item.getMetadataByMetadataString(dcRelationField);
+                        if (dcRelations.length > 0)
+                        {
+                            List<String> relations = new ArrayList<String>();
+                            for (Metadatum relation : dcRelations)
+                            {
+                                relations.add(relation.value);
+                            }
+                            dc.setRelations(relations);
+                        }
+                    }
+
+                    if (dcIdentifierField != null)
+                    {
+                        Metadatum dcIdentifiers[] = item.getMetadataByMetadataString(dcIdentifierField);
+                        if (dcIdentifiers.length > 0)
+                        {
+                            List<String> identifiers = new ArrayList<String>();
+                            for (Metadatum identifier : dcIdentifiers)
+                            {
+                                identifiers.add(identifier.value);
+                            }
+                            dc.setIdentifiers(identifiers);
+                        }
+                    }
+
+                    if (dcPublisherField != null)
+                    {
+                        Metadatum dcPublishers[] = item.getMetadataByMetadataString(dcPublisherField);
+                        if (dcPublishers.length > 0)
+                        {
+                            List<String> publishers = new ArrayList<String>();
+                            for (Metadatum publisher : dcPublishers)
+                            {
+                                publishers.add(publisher.value);
+                            }
+                            dc.setPublishers(publishers);
+                        }
+                    }
+
+                    if (dcTitleField != null)
+                    {
+                        Metadatum dcTitles[] = item.getMetadataByMetadataString(dcTitleField);
+                        if (dcTitles.length > 0)
+                        {
+                            List<String> titles = new ArrayList<String>();
+                            for (Metadatum itemTitle : dcTitles)
+                            {
+                                titles.add(itemTitle.value);
+                            }
+                            dc.setTitles(titles);
+                        }
+                    }
+                    if (dcTypeField != null)
+                    {
+                        Metadatum dcTypes[] = item.getMetadataByMetadataString(dcTypeField);
+                        if (dcTypes.length > 0)
+                        {
+                            List<String> types = new ArrayList<String>();
+                            for (Metadatum type : dcTypes)
+                            {
+                                types.add(type.value);
+                            }
+                            dc.setTypes(types);
+                        }
+                    }
+
+					//KME
                     entry.getModules().add(dc);
                 }
 
