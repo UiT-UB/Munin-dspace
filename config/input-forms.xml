@@ -342,6 +342,7 @@
          <required></required>
        </field>
 
+	   <!--
        <field>
 		 <dc-schema>dc</dc-schema>
          <dc-element>date</dc-element>
@@ -351,7 +352,8 @@
          <input-type>date</input-type>
 		 <hint>Embargodato. Brukes kun for innførsler med Tilgangsnivå satt til embargoedAccess.</hint>
          <required></required>
-       </field>
+	   </field>
+	-->
 
      </page>
 
@@ -690,6 +692,7 @@
          <required></required>
        </field>
 
+	   <!--
        <field>
 		 <dc-schema>dc</dc-schema>
          <dc-element>date</dc-element>
@@ -699,7 +702,8 @@
          <input-type>date</input-type>
 		 <hint>Embargodato. Brukes kun for innførsler med Tilgangsnivå satt til embargoedAccess.</hint>
          <required></required>
-       </field>
+	   </field>
+	-->
 
      </page>
 
@@ -935,6 +939,7 @@
          <required></required>
        </field>
 
+	   <!--
        <field>
 		 <dc-schema>dc</dc-schema>
          <dc-element>date</dc-element>
@@ -944,7 +949,8 @@
          <input-type>date</input-type>
 		 <hint>Embargodato. Brukes kun for innførsler med Tilgangsnivå satt til embargoedAccess.</hint>
          <required></required>
-       </field>
+	   </field>
+	-->
 
      </page>
 

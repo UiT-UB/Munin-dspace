@@ -381,3 +381,12 @@ div.abstract {
 #aspect_artifactbrowser_CommunityViewer_div_community-view h4.artifact-title {
 	font-size: 16px;
 }
+
+/* Hide access rights heading/label and selection list from view in input-forms */
+label[for="aspect_submission_StepTransformer_field_dc_rights_accessRights"] {
+	display: none;
+}
+
+#aspect_submission_StepTransformer_field_dc_rights_accessRights { 
+	display: none;
+}
