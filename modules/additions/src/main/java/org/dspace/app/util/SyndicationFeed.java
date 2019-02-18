@@ -335,11 +335,13 @@ public class SyndicationFeed
                 }
 
                 // only add DC module if any DC fields are configured
+				//KMS: Add fields
                 //if (dcCreatorField != null || dcDateField != null ||
                 //    dcDescriptionField != null)
                 if (dcCreatorField != null || dcDateField != null ||
                     dcDescriptionField != null || dcContributorField != null || dcRelationField != null ||
 					dcIdentifierField != null || dcPublisherField != null || dcTitleField != null || dcTypeField != null)
+				//KME
                 {
                     DCModule dc = new DCModuleImpl();
                     if (dcCreatorField != null)
