@@ -71,6 +71,8 @@
    <name-map collection-handle="10037/10352" form-name="other" />
    <name-map collection-handle="10037/10414" form-name="other" />
    <name-map collection-handle="10037/10706" form-name="other" />
+   <name-map collection-handle="10037/4465" form-name="other" />
+   <name-map collection-handle="10037/2938" form-name="other" />
 
  </form-map>
 
@@ -116,7 +118,7 @@
          <label>Tittel</label>
          <input-type>textarea</input-type>
          <hint></hint>
-         <required>Du må fylle ut tittel</required>
+         <required></required>
        </field>
 
        <field>
@@ -149,7 +151,7 @@
          <label>Dato</label>
          <input-type>date</input-type>
          <hint>Eksamensdato eller dato for tidligere utgivelse. Dag og måned er ikke obligatorisk</hint>
-         <required>Du må fylle ut minst år</required>
+         <required></required>
        </field>
 
        <field>
@@ -170,11 +172,11 @@
          <repeatable>true</repeatable>
          <label>Fagdisiplin/emneord</label>
        
-        <input-type>twobox</input-type>
+        <input-type>onebox</input-type>
          <hint>Velg først fagdisiplin fra emnelista. Flere fagdisipliner og/eller egne emneord kan legges inn ved å klikke 
 	   på knappen "Legg til flere". Skriv inn bare ett emneord (enkeltord eller uttrykk) per felt. Velg "Legg til flere" 
 	   hvis du vil legge til flere emneord.</hint>
-        <required>Du må velge et emneord eller flere</required>
+        <required></required>
          <!-- Since we have defined and use two vocabularies (norwegian and english) we don't need to define a certain vocabulary here.-->
 	 <!-- However, we must include the tag with some content, otherwise the subject list link (in the submission form) will be disabled. -->
 	 <!-- To use only one vocabulary, we need to define it here, and include a vocabulary parameter in the dspace:controlledvocabulary tag -->
@@ -202,7 +204,7 @@
          <label>Innholdstype</label>
          <input-type value-pairs-name="common_types">dropdown</input-type>
          <hint>Velg innholdstype på det dokumentet du registrerer</hint>
-         <required>Du må velge type(r)</required>
+         <required></required>
        </field>
 
        <field>
@@ -216,7 +218,7 @@
            i lista nedenfor, velg "Other". Hvis innholdet ikke har noe språk (for eksempel hvis det er et bilde), 
 	   velg "N/A".
 	 </hint>
-         <required>Du må velge en verdi</required>
+         <required></required>
        </field>
 
 
@@ -302,7 +304,7 @@
          <dc-qualifier>citation</dc-qualifier>
          <repeatable>false</repeatable>
          <label>Referanse</label>
-         <input-type>onebox</input-type>
+         <input-type>textarea</input-type>
          <hint>Referanse til tidligere utgivelse av dette dokumentet</hint>
          <required></required>
        </field>
@@ -384,7 +386,7 @@
          <label>Tittel</label>
          <input-type>textarea</input-type>
          <hint></hint>
-         <required>Du må fylle ut tittel</required>
+         <required></required>
        </field>
 
        <field>
@@ -428,7 +430,7 @@
          <label>Dato</label>
          <input-type>date</input-type>
          <hint>Disputasdato</hint>
-         <required>Du må fylle ut minst år</required>
+         <required></required>
        </field>
 
        <field>
@@ -453,7 +455,7 @@
          <hint>Velg først fagdisiplin fra emnelista. Flere fagdisipliner og/eller egne emneord kan legges inn ved å klikke 
 	   på knappen "Legg til flere". Skriv inn bare ett emneord (enkeltord eller uttrykk) per felt. Velg "Legg til flere" 
 	   hvis du vil legge til flere emneord.</hint>
-        <required>Du må velge minst ett emneord</required>
+        <required></required>
          <!-- Since we have defined and use two vocabularies (norwegian and english) we don't need to define a certain vocabulary here.-->
 	 <!-- However, we must include the tag with some content, otherwise the subject list link (in the submission form) will be disabled. -->
 	 <!-- To use only one vocabulary, we need to define it here, and include a vocabulary parameter in the dspace:controlledvocabulary tag -->
@@ -481,7 +483,7 @@
          <label>Innholdstype</label>
          <input-type value-pairs-name="common_types">dropdown</input-type>
          <hint>Velg innholdstype på det dokumentet du registrerer</hint>
-         <required>Du må velge type(r)</required>
+         <required></required>
        </field>
 
        <field>
@@ -495,7 +497,7 @@
            i lista nedenfor, velg "Other". Hvis innholdet ikke har noe språk (for eksempel hvis det er et bilde), 
 	   velg "N/A".
 	 </hint>
-         <required>Du må velge en verdi</required>
+         <required></required>
        </field>
 
 
@@ -633,9 +635,8 @@
          <required></required>
        </field>
 
-
        <field>
-		 <dc-schema>dc</dc-schema>
+         <dc-schema>dc</dc-schema>
          <dc-element>relation</dc-element>
          <dc-qualifier>haspart</dc-qualifier>
          <repeatable>true</repeatable>
@@ -652,7 +653,7 @@
          <dc-qualifier>citation</dc-qualifier>
          <repeatable>false</repeatable>
          <label>Referanse</label>
-         <input-type>onebox</input-type>
+         <input-type>textarea</input-type>
          <hint>Referanse til tidligere utgivelse av dette dokumentet</hint>
          <required></required>
        </field>
@@ -747,7 +748,7 @@
          <label>Tittel</label>
          <input-type>textarea</input-type>
          <hint></hint>
-         <required>Du må fylle ut tittel</required>
+         <required></required>
        </field>
 
        <field>
@@ -780,7 +781,7 @@
          <label>Dato</label>
          <input-type>date</input-type>
          <hint>Dato for tidligere utgivelse. Dag og måned er ikke obligatorisk</hint>
-         <required>Du må fylle ut minst år</required>
+         <required></required>
        </field>
 
        <field>
@@ -794,7 +795,7 @@
          <hint>Velg først fagdisiplin fra emnelista. Flere fagdisipliner og/eller egne emneord kan legges inn ved å klikke 
 	   på knappen "Legg til flere". Skriv inn bare ett emneord (enkeltord eller uttrykk) per felt. Velg "Legg til flere" 
 	   hvis du vil legge til flere emneord.</hint>
-        <required>Du må velge et emneord eller flere</required>
+        <required></required>
          <!-- Since we have defined and use two vocabularies (norwegian and english) we don't need to define a certain vocabulary here.-->
 	 <!-- However, we must include the tag with some content, otherwise the subject list link (in the submission form) will be disabled. -->
 	 <!-- To use only one vocabulary, we need to define it here, and include a vocabulary parameter in the dspace:controlledvocabulary tag -->
@@ -822,7 +823,7 @@
          <label>Innholdstype</label>
          <input-type value-pairs-name="common_types">dropdown</input-type>
          <hint>Velg innholdstype på det dokumentet du registrerer</hint>
-         <required>Du må velge type(r)</required>
+         <required></required>
        </field>
 
        <field>
@@ -836,7 +837,7 @@
            i lista nedenfor, velg "Other". Hvis innholdet ikke har noe språk (for eksempel hvis det er et bilde), 
 	   velg "N/A".
 	 </hint>
-         <required>Du må velge en verdi</required>
+         <required></required>
        </field>
 
 
@@ -899,7 +900,7 @@
          <dc-qualifier>citation</dc-qualifier>
          <repeatable>true</repeatable>
          <label>Referanse</label>
-         <input-type>onebox</input-type>
+         <input-type>textarea</input-type>
          <hint>Referanse til tidligere utgivelse av dette dokumentet</hint>
          <required></required>
        </field>

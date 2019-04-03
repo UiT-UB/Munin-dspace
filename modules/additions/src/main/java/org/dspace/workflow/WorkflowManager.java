@@ -176,8 +176,6 @@ public class WorkflowManager
         DatabaseManager.insert(c, row);
 
         WorkflowItem wfi = new WorkflowItem(c, row);
-		//KM: DEBUG
-		System.out.println("Etter new WorkflowItem");
 
         wfi.setMultipleFiles(wsi.hasMultipleFiles());
         wfi.setMultipleTitles(wsi.hasMultipleTitles());
@@ -185,17 +183,10 @@ public class WorkflowManager
 
         // remove the WorkspaceItem
         wsi.deleteWrapper();
-		//KM: DEBUG
-		System.out.println("Etter deleteWrapper");
 
         // now get the workflow started
         wfi.setState(WFSTATE_SUBMIT);
-		//KM: DEBUG
-		System.out.println("Etter setState");
-
         advance(c, wfi, null);
-		//KM: DEBUG
-		System.out.println("Etter advance");
 
         // Return the workflow item
         return wfi;

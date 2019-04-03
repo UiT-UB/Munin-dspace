@@ -365,9 +365,7 @@
             </xsl:if>
 
 	    <!-- KM: ShareThis code -->
-	    <script type="text/javascript">var switchTo5x=true;</script>
-	    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-	    <script type="text/javascript">stLight.options({publisher: "d4033f5d-dc74-4e21-883a-cf013cb87854", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+		<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5b69a004b1029a0011220ff1&amp;product=inline-share-buttons' async='async'></script>
 
         </head>
     </xsl:template>
