@@ -2218,7 +2218,7 @@
 	<!-- structural.xsl -->
 	<message key="xmlui.dri2xhtml.structural.footer-promotional">
 	  <p>
-	          Munin bygger på <a href="http://www.dspace.org">DSpace</a> 5.7
+	          Munin bygger på <a href="http://www.dspace.org">DSpace</a>
 	  </p>
 	  <p>
 		  UiT Norges Arktiske Universitet<br />Universitetsbiblioteket<br /><a href="http://uit.no/ub">uit.no/ub</a> - <a href="mailto:munin@ub.uit.no">munin@ub.uit.no</a>
