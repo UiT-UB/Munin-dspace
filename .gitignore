@@ -1,2 +1,3 @@
 target/
-modules/xmlui/src/main/webapp/static/stats/
+modules/xmlui/src/main/webapp/static/stats/*
+!modules/xmlui/src/main/webapp/static/stats/.gitignore
