@@ -873,8 +873,7 @@
     <xsl:template match="mets:file">
         <xsl:param name="context" select="."/>
         <div class="file-wrapper row">
-	  <!-- KM: Remove thumbnail view -->
-	  <!--
+	  
             <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail">
                     <a class="image-link">
@@ -886,8 +885,29 @@
                         mets:file[@GROUPID=current()/@GROUPID]">
                                 <img alt="Thumbnail">
                                     <xsl:attribute name="src">
+
+
+                            <!-- KM: Checking if Thumbnail is restricted and if so, show a restricted image -->
+							<xsl:variable name="src">
+								<xsl:value-of select="$context/mets:fileSec/mets:fileGrp[@USE='THUMBNAIL']/
+                                    mets:file[@GROUPID=current()/@GROUPID]/mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
+							</xsl:variable>
+                            <xsl:choose>
+                                <xsl:when test="contains($src,'isAllowed=n')">
+                                        <xsl:value-of select="$theme-path"/>
+                                        <xsl:text>images/restricted_</xsl:text>
+                                        <xsl:value-of select="$current_locale"/>
+                                        <xsl:text>.png</xsl:text>
+                                </xsl:when>
+                                <xsl:otherwise>
+										<xsl:value-of select="$src" />
+<!--
                                         <xsl:value-of select="$context/mets:fileSec/mets:fileGrp[@USE='THUMBNAIL']/
                                     mets:file[@GROUPID=current()/@GROUPID]/mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
+-->								</xsl:otherwise>
+							</xsl:choose>
+							
+
                                     </xsl:attribute>
                                 </img>
                             </xsl:when>
@@ -907,11 +927,9 @@
                     </a>
                 </div>
             </div>
-	    -->
+	    
 
-	  <!-- KM: Adjust col-style because of the removal of the thumbnails -->
-            <!--<div class="col-xs-6 col-sm-7">-->
-	    <div class="col-xs-6 col-sm-5">
+            <div class="col-xs-6 col-sm-7">
                 <dl class="file-metadata dl-horizontal">
                     <dt>
                         <i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-name</i18n:text>
@@ -973,9 +991,7 @@
                             </xsl:with-param>
                         </xsl:call-template>
                     </dd>
-		<!-- KM: Move the file descriptions to next column -->
                 <!-- Display the contents of 'Description' only if bitstream contains a description -->
-		<!--
                 <xsl:if test="mets:FLocat[@LOCTYPE='URL']/@xlink:label != ''">
                         <dt>
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-description</i18n:text>
@@ -988,13 +1004,11 @@
                             <xsl:value-of select="util:shortenString(mets:FLocat[@LOCTYPE='URL']/@xlink:label, 30, 5)"/>
                         </dd>
                 </xsl:if>
-		-->
+		
                 </dl>
             </div>
 
-	    <!-- KM: Adjust col-style -->
-            <!--<div class="file-link col-xs-6 col-xs-offset-6 col-sm-2 col-sm-offset-0">-->
-	    <div class="file-link col-xs-6 col-xs-offset-6 col-sm-1 col-sm-offset-0">
+            <div class="file-link col-xs-6 col-xs-offset-0 col-sm-2 col-sm-offset-0">
                 <xsl:choose>
                     <xsl:when test="@ADMID">
                         <xsl:call-template name="display-rights"/>
@@ -1004,34 +1018,6 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </div>
-
-	    <!-- KM: Move file descriptions here -->	    
-	    <div class="col-xs-6 col-sm-6">
-	      
-               <dl class="file-metadata dl-horizontal">
-		 
-                <!-- Display the contents of 'Description' only if bitstream contains a description -->
-                <xsl:if test="mets:FLocat[@LOCTYPE='URL']/@xlink:label != ''">
-		  <!--
-                       <dt>
-                            <i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-description</i18n:text>
-                            <xsl:text>:</xsl:text>
-                        </dt>
-                        <dd class="word-break">
-		  -->
-                            <xsl:attribute name="title">
-                                <xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:label"/>
-                            </xsl:attribute>
-                            <xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:label" disable-output-escaping="yes"/>
-                            <!--<xsl:value-of select="util:shortenString(mets:FLocat[@LOCTYPE='URL']/@xlink:label, 30, 5)"/>-->
-			<!--
-                        </dd>
-			-->
-                </xsl:if>
-		
-	      </dl>
-		
-	    </div>	    
 
         </div>
 
