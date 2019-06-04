@@ -2280,6 +2280,7 @@
     <message key="xmlui.dri2xhtml.METS-1.0.item-isversionof">Is version of</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-haspart">Has part(s)</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-ispartof">Is part of</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-isbasedon">Related research data</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-embargo">File(s) with restricted access are under embargo until</message>
 	
 	<message key="ub.xmlui.dri2xhtml.METS-1.0.item-month-01">Jan</message>

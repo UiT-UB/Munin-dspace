@@ -658,6 +658,17 @@
          <required></required>
        </field>
 
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>relation</dc-element>
+         <dc-qualifier>isbasedon</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Forskningsdatasett</label>
+         <input-type>textarea</input-type>
+         <hint>Referanse til forskningsdatasett som er brukt i avhandlingen</hint>
+         <required></required>
+       </field>
+
 	   <!--
        <field>
          <dc-schema>dc</dc-schema>
@@ -902,6 +913,17 @@
          <label>Referanse</label>
          <input-type>textarea</input-type>
          <hint>Referanse til tidligere utgivelse av dette dokumentet</hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>relation</dc-element>
+         <dc-qualifier>isbasedon</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Forskningsdatasett</label>
+         <input-type>textarea</input-type>
+         <hint>Referanse til forskningsdatasett som er brukt i dokumentet</hint>
          <required></required>
        </field>
 
