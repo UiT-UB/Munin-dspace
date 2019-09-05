@@ -566,31 +566,6 @@
 
        <field>
 		 <dc-schema>dc</dc-schema>
-         <dc-element>description</dc-element>
-         <dc-qualifier>consent</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Samtykke fra medforfattere</label>
-         <input-type value-pairs-name="common_consent">list</input-type>
-         <!--<input-type>text</input-type>-->
-         <hint></hint>
-         <required></required>
-       </field>
-
-       <field>
-		 <dc-schema>dc</dc-schema>
-         <dc-element>description</dc-element>
-         <dc-qualifier>consentextended</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Mer om samtykke</label>
-         <input-type>textarea</input-type>
-         <!--<input-type>text</input-type>-->
-         <hint></hint>
-         <required></required>
-       </field>
-
-
-       <field>
-		 <dc-schema>dc</dc-schema>
          <dc-element>identifier</dc-element>
          <dc-qualifier></dc-qualifier>
          <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
@@ -1214,21 +1189,6 @@
      <pair>
        <displayed-value>dr.philos.</displayed-value>
        <stored-value>dr.philos.</stored-value>
-     </pair>
-   </value-pairs>
-
-   <value-pairs value-pairs-name="common_consent" dc-term="description_consent">
-     <pair>
-       <displayed-value>Jeg bekrefter at alle medforfattere samtykker i å gjøre artiklene tilgjengelige i Munin</displayed-value>
-       <stored-value>Har samtykke</stored-value>
-     </pair>
-     <pair>
-       <displayed-value>Jeg har (ennå) ikke samtykke fra alle medforfattere til å gjøre artiklene tilgjengelige i Munin. (Vennligst spesifiser i feltet nedenfor hva som gjenstår, og om du forventer å få innhentet samtykke fra de som gjenstår.)</displayed-value>
-       <stored-value>Har ikke samtykke</stored-value>
-     </pair>
-     <pair>
-       <displayed-value>Ikke aktuelt</displayed-value>
-       <stored-value>N/A</stored-value>
      </pair>
    </value-pairs>
 
