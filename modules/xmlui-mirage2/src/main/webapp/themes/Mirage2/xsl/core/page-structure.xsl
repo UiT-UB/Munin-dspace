@@ -401,7 +401,7 @@
 				<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']"/>
 				<xsl:text>.png</xsl:text>
 			      </xsl:attribute>
-			    </img>
+				</img>
                         </a>
 
 
@@ -829,9 +829,6 @@
 	  <div class="footer-wrap">
 
 		<div id="designedby" class="container text-muted">
-                    <div id="footer_feedback" class="col-xs-7 col-sm-8">
-
-		      <i18n:text>xmlui.dri2xhtml.structural.footer-promotional</i18n:text>
 <!--
         <footer>
 
@@ -862,10 +859,8 @@
                             </a>
                         </div>
 -->
-                    </div>
 
-                    <div class="col-xs-5 col-sm-4 hidden-print">
-                        <div class="pull-right">
+                    <div class="col col-sm-8 hidden-print">
 
                             <a title="UiT" target="_blank" href="http://uit.no">
 								<!--<img alt="UiT" src="{concat($theme-path, 'images/@mirelogo-small.png')}"/>-->
@@ -880,6 +875,16 @@
 				</img>
 				  
                             </a>
+
+                    </div>
+
+                    <div id="footer_feedback" class="col col-sm-4">
+                        <div class="pull-right">
+
+							<i18n:text>xmlui.dri2xhtml.structural.footer-promotional</i18n:text>
+                        </div>
+                    </div>
+
 <!--
                             <span class="theme-by">Theme by&#160;</span>
                             <br/>
@@ -888,9 +893,6 @@
                                 <img alt="Atmire NV" src="{concat($theme-path, 'images/@mirelogo-small.png')}"/>
                             </a>
 -->
-                        </div>
-
-                    </div>
                 </div>
                 <!--Invisible link to HTML sitemap (for search engines) -->
                 <a class="hidden">
