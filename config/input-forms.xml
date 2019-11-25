@@ -73,6 +73,7 @@
    <name-map collection-handle="10037/10706" form-name="other" />
    <name-map collection-handle="10037/4465" form-name="other" />
    <name-map collection-handle="10037/2938" form-name="other" />
+   <name-map collection-handle="10037/16694" form-name="gamlehovedoppgaver" />
 
  </form-map>
 
@@ -954,6 +955,138 @@
 
    </form>
 
+   <!-- Gamle hovedoppgaver -->
+   
+   <form name="gamlehovedoppgaver">
+
+     <page number="1">
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>contributor</dc-element>
+         <dc-qualifier>author</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Forfatter</label>
+         <input-type>name</input-type>
+         <hint></hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>title</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Tittel</label>
+         <input-type>textarea</input-type>
+         <hint></hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>description</dc-element>
+         <dc-qualifier>abstract</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Sammendrag</label>
+         <input-type>textarea</input-type>
+         <hint></hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>issued</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Dato</label>
+         <input-type>date</input-type>
+         <hint>Dato for tidligere utgivelse. Dag og måned er ikke obligatorisk</hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>description</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Beskrivelse</label>
+         <input-type>textarea</input-type>
+         <hint>Legg inn evt. beskrivelse av dokumentet, f.eks. om det er en hovedfagsoppgave, magistergradsoppgave, etc., og eventuelle andre relevante opplysninger.</hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>subject</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Fagdisiplin/emneord</label>
+       
+        <input-type>onebox</input-type>
+         <hint>Velg først fagdisiplin fra emnelista. Flere fagdisipliner og/eller egne emneord kan legges inn ved å klikke 
+	   på knappen "Legg til flere". Skriv inn bare ett emneord (enkeltord eller uttrykk) per felt. Velg "Legg til flere" 
+	   hvis du vil legge til flere emneord.</hint>
+        <required></required>
+         <!-- Since we have defined and use two vocabularies (norwegian and english) we don't need to define a certain vocabulary here.-->
+	 <!-- However, we must include the tag with some content, otherwise the subject list link (in the submission form) will be disabled. -->
+	 <!-- To use only one vocabulary, we need to define it here, and include a vocabulary parameter in the dspace:controlledvocabulary tag -->
+	 <!-- in the file controlledvocabulary/controlledvocabulary.jsp.-->
+         <vocabulary>nsi</vocabulary>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>publisher</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Utgiver</label>
+         <input-type>onebox</input-type>
+         <hint>Navn på utgiver eller tidligere utgiver av dette 
+         dokumentet</hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>type</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Innholdstype</label>
+         <input-type value-pairs-name="common_types">dropdown</input-type>
+         <hint>Velg innholdstype på det dokumentet du registrerer</hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>language</dc-element>
+         <dc-qualifier>iso</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Språk</label>
+         <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+         <hint>Velg det språket som dokumentets innhold er skrevet på. Hvis språket ikke er med
+           i lista nedenfor, velg "Other". Hvis innholdet ikke har noe språk (for eksempel hvis det er et bilde), 
+		   velg "N/A".
+		 </hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>description</dc-element>
+         <dc-qualifier>collectionhandle</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Samling i Munin</label>
+         <input-type value-pairs-name="common_collections">dropdown</input-type>
+         <hint>Velg hvilken samling i Munin dette dokumentet skal tilhøre</hint>
+         <required></required>
+       </field>
+	   
+	 </page>
+   </form>
+	
+
 <!-- one (is this used for anything?) -->
 
    <form name="one">
@@ -1217,6 +1350,169 @@
        <displayed-value>closedAccess</displayed-value>
 	   <stored-value>closedAccess</stored-value>
       </pair>
+   </value-pairs>
+
+   <value-pairs value-pairs-name="common_collections" dc-term="description_collectionhandle">
+     <pair>
+       <displayed-value>Doktorgradsavhandlinger (HSL-fak)</displayed-value>
+	   <stored-value>10037/281</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgave i Russlandsstudier, studieretning kultur, samfunn og historie</displayed-value>
+	   <stored-value>10037/4189</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgave i Russlandsstudier, studieretning russisk</displayed-value>
+	   <stored-value>10037/4190</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i aksjonslæring</displayed-value>
+	   <stored-value>10037/118</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i arkeologi</displayed-value>
+	   <stored-value>10037/86</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i barnevern og sosialt arbeid</displayed-value>
+	   <stored-value>10037/8221</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i dokumentasjonsvitenskap</displayed-value>
+	   <stored-value>10037/160</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i filosofi</displayed-value>
+	   <stored-value>10037/124</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i historie</displayed-value>
+	   <stored-value>10037/18</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i internasjonal sikkerhet, etterretning og etikk</displayed-value>
+	   <stored-value>10037/1844</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i konflikt, sikkerhet og flerkulturell forståelse (erfaringsbasert)</displayed-value>
+	   <stored-value>10037/129</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i kultur og profesjon</displayed-value>
+	   <stored-value>10037/4841</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i kunstvitenskap</displayed-value>
+	   <stored-value>10037/161</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i ledelse (erfaringsbasert)</displayed-value>
+	   <stored-value>10037/130</stored-value>
+	 </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i ledelse og organisasjonsvitenskap (erfaringsbasert)</displayed-value>
+	   <stored-value>10037/131</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i litteratur</displayed-value>
+	   <stored-value>10037/162</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i lærerutdanning 1.-7. trinn</displayed-value>
+	   <stored-value>10037/8169</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i lærerutdanning 5.-10. trinn</displayed-value>
+	   <stored-value>10037/8170</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i organisasjons- og ledelsesvitenskap</displayed-value>
+	   <stored-value>10037/133</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i pedagogikk</displayed-value>
+	   <stored-value>10037/119</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i reiseliv og nordlige studier</displayed-value>
+	   <stored-value>10037/5342</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i religionsvitenskap</displayed-value>
+	   <stored-value>10037/17</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i samfunnsplanlegging og kulturforståelse</displayed-value>
+	   <stored-value>10037/125</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i sosialantropologi</displayed-value>
+	   <stored-value>10037/127</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i sosiologi</displayed-value>
+	   <stored-value>10037/128</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i spesialpedagogikk</displayed-value>
+	   <stored-value>10037/121</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i språk og samfunnsfag</displayed-value>
+	   <stored-value>10037/159</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i språk</displayed-value>
+	   <stored-value>10037/163</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i statsvitenskap</displayed-value>
+	   <stored-value>10037/132</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i stedsutvikling</displayed-value>
+	   <stored-value>10037/1231</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i strategisk ledelse og økonomi (MBA) - ISS</displayed-value>
+	   <stored-value>10037/2828</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i utdanningsledelse</displayed-value>
+	   <stored-value>10037/122</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mastergradsoppgaver i voksenpedagogikk</displayed-value>
+	   <stored-value>10037/123</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Master's theses in English linguistics</displayed-value>
+	   <stored-value>10037/164</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Master's theses in Governance and Entrepreneurship in Northern and Indigenous Areas</displayed-value>
+	   <stored-value>10037/11701</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Master's theses in indigenous studies</displayed-value>
+	   <stored-value>10037/151</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Master's theses in peace and conflict transformation</displayed-value>
+	   <stored-value>10037/140</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Master's theses in theoretical linguistics</displayed-value>
+	   <stored-value>10037/165</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Master's theses in visual cultural studies</displayed-value>
+	   <stored-value>10037/152</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Master's Thesis in Human Rights Practice</displayed-value>
+	   <stored-value>10037/1867</stored-value>
+     </pair>
    </value-pairs>
 
  </form-value-pairs>
