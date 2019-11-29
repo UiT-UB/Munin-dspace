@@ -2323,6 +2323,13 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.size-kilobytes">Kb</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.size-megabytes">Mb</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.size-gigabytes">Gb</message>
+
+    <!-- KM: Added -->
+    <message key="xmlui.dri2xhtml.METS-1.0.typeversion.draft">Utkast</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.typeversion.submittedVersion">Innsendt manusversjon</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.typeversion.acceptedVersion">Akseptert manusversjon</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.typeversion.publishedVersion">Publisert versjon</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.typeversion.updatedVersion">Oppdatert versjon</message>
 	
 	<message key="xmlui.dri2xhtml.METS-1.0.license-text">Følgende lisensfil er knyttet til denne innførselen:</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.cc-license-text">Med mindre det står noe annet, er denne innførselens lisens beskrevet som </message>

@@ -2325,6 +2325,14 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.size-kilobytes">Kb</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.size-megabytes">Mb</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.size-gigabytes">Gb</message>
+
+	<!-- KM: Added -->
+	<message key="xmlui.dri2xhtml.METS-1.0.typeversion.draft">Draft</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.typeversion.submittedVersion">Submitted manuscript version</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.typeversion.acceptedVersion">Accepted manuscript version</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.typeversion.publishedVersion">Published version</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.typeversion.updatedVersion">Updated version</message>
+
 	
 	<message key="xmlui.dri2xhtml.METS-1.0.license-text">The following license file are associated with this item:</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.cc-license-text">Except where otherwise noted, this item's license is described as </message>

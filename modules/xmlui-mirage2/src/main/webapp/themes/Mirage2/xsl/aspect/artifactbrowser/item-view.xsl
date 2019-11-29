@@ -642,6 +642,19 @@
         </xsl:if>
     </xsl:template>
 
+    <!-- KM: Added field - dc.type.version -->
+    <xsl:template name="itemSummaryView-DIM-typeversion">
+        <xsl:if test="//mets:METS/mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim/dim:field[@element='type' and @qualifier='version' and descendant::text()]">
+		    <xsl:variable name="typeversion" select="//mets:METS/mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim/dim:field[@element='type' and @qualifier='version']/node()"/>
+                <span>
+					<i18n:text>
+						<xsl:value-of select="concat('xmlui.dri2xhtml.METS-1.0.typeversion.', $typeversion)"/>
+					</i18n:text>
+					<xsl:text>&#160;</xsl:text>
+                </span>
+        </xsl:if>
+    </xsl:template>
+
     <xsl:template name="itemSummaryView-show-full">
         <div class="simple-item-view-show-full item-page-field-wrapper table">
             <h5>
@@ -791,9 +804,14 @@
         </div>
 
 	<!-- KM: Add file description and mimetype after file name (next line) -->
+	<!-- KM: Display dc.type.version in display mode before file description (normally they will not both appear) -->
 	<div style="margin-left: 18px; margin-bottom: 5px;">
-	  <xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:label" disable-output-escaping="yes"/>
-	  <xsl:text> (</xsl:text>
+      <xsl:call-template name="itemSummaryView-DIM-typeversion"/>
+	  <xsl:if test="mets:FLocat[@LOCTYPE='URL']/@xlink:label != ''">
+		  <xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:label" disable-output-escaping="yes"/>
+		  <xsl:text>&#160;</xsl:text>
+	  </xsl:if>
+	  <xsl:text>(</xsl:text>
 	  <xsl:call-template name="getFileTypeDesc">
 	    <xsl:with-param name="mimetype">
 	      <xsl:value-of select="substring-before($mimetype,'/')"/>
