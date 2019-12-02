@@ -2280,6 +2280,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-ispartof">Er en del av</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-isbasedon">Tilknyttede forskningsdata</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-embargo">Fil(er) med begrenset tilgang er under embargo til</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-doi">DOI</message>
 
 	<message key="ub.xmlui.dri2xhtml.METS-1.0.item-month-01">jan</message>
 	<message key="ub.xmlui.dri2xhtml.METS-1.0.item-month-02">feb</message>

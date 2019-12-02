@@ -116,8 +116,9 @@
 
             <div class="row">
                 <div class="col-sm-4">
-			<!-- KM: Add and reorganize matadata fields -->
+			<!-- KM: Add and reorganize metadata fields -->
 			<xsl:call-template name="itemSummaryView-DIM-URI"/>
+			<xsl:call-template name="itemSummaryView-DIM-doi"/>
             <div class="row">
 				<div class="col-xs-6 col-sm-12">
 			        <xsl:call-template name="itemSummaryView-DIM-thumbnail"/>
@@ -514,6 +515,47 @@
 						<xsl:value-of select="node()" disable-output-escaping="yes"/>
 
 						<xsl:if test="count(following-sibling::dim:field[@element='relation' and @qualifier='haspart']) != 0">
+							<div class="spacer">&#160;</div>
+		     		    </xsl:if>
+
+                    </xsl:for-each>
+                </span>
+            </div>
+        </xsl:if>
+    </xsl:template>
+
+    <!-- KM: Added field - dc.relation.doi -->
+    <xsl:template name="itemSummaryView-DIM-doi">
+        <xsl:if test="dim:field[@element='identifier' and @qualifier='doi' and descendant::text()]">
+            <div class="simple-item-view-doi item-page-field-wrapper table">
+                <h5><i18n:text>xmlui.dri2xhtml.METS-1.0.item-doi</i18n:text></h5>
+                <span>
+                    <xsl:for-each select="dim:field[@element='identifier' and @qualifier='doi']">
+						<xsl:choose>
+							<xsl:when test="starts-with(., '10.')">
+								<a>
+									<xsl:attribute name="href">
+										<xsl:text>https://doi.org/</xsl:text>
+										<xsl:value-of select="node()"/>
+									</xsl:attribute>
+									<xsl:text>https://doi.org/</xsl:text>
+									<xsl:value-of select="node()"/>
+								</a>
+							</xsl:when>
+							<xsl:when test="starts-with(., 'http')">
+								<a>
+									<xsl:attribute name="href">
+										<xsl:value-of select="node()"/>
+									</xsl:attribute>
+									<xsl:value-of select="node()"/>
+								</a>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:copy-of select="node()" />
+							</xsl:otherwise>
+						</xsl:choose>
+
+						<xsl:if test="count(following-sibling::dim:field[@element='identifier' and @qualifier='doi']) != 0">
 							<div class="spacer">&#160;</div>
 		     		    </xsl:if>
 
