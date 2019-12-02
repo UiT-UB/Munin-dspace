@@ -155,12 +155,12 @@
 	                <span class="publisher-date h4">  <small>
 	                    <xsl:text>(</xsl:text>
 			    <!-- KM: Use type instead of publisher, and use a loop -->
-	                    <xsl:if test="dim:field[@element='type']">
+	                    <xsl:if test="dim:field[@element='type'][not(@qualifier)]">
 	                        <span class="publisher">
 				  <!--<xsl:copy-of select="dim:field[@element='publisher']/node()"/>-->
-				  <xsl:for-each select="dim:field[@element='type']">
+				  <xsl:for-each select="dim:field[@element='type'][not(@qualifier)]">
 				    <xsl:copy-of select="node()"/>
-				    <xsl:if test="count(following-sibling::dim:field[@element='type']) != 0">
+				    <xsl:if test="count(following-sibling::dim:field[@element='type'][not(@qualifier)]) != 0">
 				      <xsl:text>; </xsl:text>
 				    </xsl:if>
 				  </xsl:for-each>
