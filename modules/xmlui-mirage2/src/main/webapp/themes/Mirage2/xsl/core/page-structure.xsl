@@ -726,8 +726,9 @@
             <xsl:text>?sections=dmdSec,fileSec&amp;fileGrpTypes=THUMBNAIL</xsl:text>
         </xsl:variable>
 
+		<!-- KM: Specify unqualified dc.rights, or else the first dc.rights.xxx field is used -->
         <xsl:variable name="ccLicenseName"
-                      select="document($externalMetadataURL)//dim:field[@element='rights']"
+                      select="document($externalMetadataURL)//dim:field[@element='rights'][not(@qualifier)]"
                 />
         <xsl:variable name="ccLicenseUri"
                       select="document($externalMetadataURL)//dim:field[@element='rights'][@qualifier='uri']"
@@ -748,7 +749,8 @@
 
         <xsl:if test="$ccLicenseName and $ccLicenseUri and contains($ccLicenseUri, 'creativecommons')">
             <div about="{$handleUri}" class="row">
-            <div class="col-sm-3 col-xs-12">
+			<!-- KM: Edit columns -->
+            <div class="col-sm-2 col-xs-12">
                 <a rel="license"
                    href="{$ccLicenseUri}"
                    alt="{$ccLicenseName}"
@@ -759,7 +761,8 @@
                         <xsl:with-param name="ccLicenseUri" select="$ccLicenseUri"/>
                     </xsl:call-template>
                 </a>
-            </div> <div class="col-sm-8">
+			<!-- KM: Edit columns -->
+            </div> <div class="col-sm-10">
                 <span>
                     <i18n:text>xmlui.dri2xhtml.METS-1.0.cc-license-text</i18n:text>
                     <xsl:value-of select="$ccLicenseName"/>

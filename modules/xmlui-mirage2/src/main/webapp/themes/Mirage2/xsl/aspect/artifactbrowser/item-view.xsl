@@ -59,8 +59,6 @@
             </div>
         </xsl:if>
 
-	<!-- KM: Add ShareThis buttons -->
-	<xsl:call-template name="share-buttons"/>
 
     </xsl:template>
 
@@ -104,9 +102,6 @@
             </xsl:otherwise>
         </xsl:choose>
 
-	<!-- KM: Add ShareThis buttons -->
-	<xsl:call-template name="share-buttons"/>
-
     </xsl:template>
 
 
@@ -142,7 +137,11 @@
             <xsl:call-template name='impact-plumx'/>
         </xsl:if>
 
-                </div>
+		<!-- KM: Add ShareThis buttons -->
+		<xsl:call-template name="share-buttons"/>
+
+
+				</div>
                 <div class="col-sm-8">
 		  <xsl:call-template name="itemSummaryView-DIM-authors"/>
 		  <xsl:call-template name="itemSummaryView-DIM-editor"/>
@@ -167,6 +166,7 @@
 		</div>
 		<div class="col-sm-8">
                     <xsl:call-template name="itemSummaryView-collections"/>
+					<xsl:call-template name="itemSummaryView-DIM-rightsholder"/>
 		</div>
 	    </div>
 
@@ -694,6 +694,24 @@
 					</i18n:text>
 					<xsl:text>&#160;</xsl:text>
                 </span>
+        </xsl:if>
+    </xsl:template>
+
+    <!-- KM: Added field - dc.rights.holder -->
+    <xsl:template name="itemSummaryView-DIM-rightsholder">
+        <xsl:if test="dim:field[@element='rights' and @qualifier='holder'and descendant::text()]">
+            <div class="simple-item-view-publisher item-page-field-wrapper table">
+                <span>
+                    <xsl:for-each select="dim:field[@element='rights' and @qualifier='holder']">
+		      
+		      <xsl:copy-of select="./node()"/>
+		      
+		      <xsl:if test="count(following-sibling::dim:field[@element='rights' and @qualifier='holder']) != 0">
+			<br/>
+		      </xsl:if>
+                    </xsl:for-each>
+                </span>
+            </div>
         </xsl:if>
     </xsl:template>
 

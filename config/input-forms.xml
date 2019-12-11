@@ -337,6 +337,17 @@
        <field>
 		 <dc-schema>dc</dc-schema>
          <dc-element>rights</dc-element>
+         <dc-qualifier>holder</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Opphavsrett</label>
+         <input-type>onebox</input-type>
+         <hint></hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>rights</dc-element>
          <dc-qualifier>accessRights</dc-qualifier>
          <repeatable></repeatable>
          <label>Tilgangsnivå</label>
@@ -672,6 +683,17 @@
        <field>
 		 <dc-schema>dc</dc-schema>
          <dc-element>rights</dc-element>
+         <dc-qualifier>holder</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Opphavsrett</label>
+         <input-type>onebox</input-type>
+         <hint></hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>rights</dc-element>
          <dc-qualifier>accessRights</dc-qualifier>
          <repeatable></repeatable>
          <label>Tilgangsnivå</label>
@@ -941,6 +963,17 @@
        <field>
 		 <dc-schema>dc</dc-schema>
          <dc-element>rights</dc-element>
+         <dc-qualifier>holder</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Opphavsrett</label>
+         <input-type>onebox</input-type>
+         <hint></hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>rights</dc-element>
          <dc-qualifier>accessRights</dc-qualifier>
          <repeatable></repeatable>
          <label>Tilgangsnivå</label>
@@ -1093,7 +1126,19 @@
          <hint>Velg hvilken samling i Munin dette dokumentet skal tilhøre</hint>
          <required></required>
        </field>
-	   
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>rights</dc-element>
+         <dc-qualifier>holder</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Opphavsrett</label>
+         <input-type>onebox</input-type>
+         <hint></hint>
+         <required></required>
+       </field>
+
+	   <!-- dc.rights.accessRights også her? -->
 	 </page>
    </form>
 	
