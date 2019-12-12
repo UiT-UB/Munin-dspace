@@ -396,3 +396,8 @@ label[for="aspect_submission_StepTransformer_field_dc_rights_accessRights"] {
 #footer_feedback .pull-right {
 	text-align: right;
 }
+
+/* Make sure DOI links wrap */
+div.simple-item-view-doi {
+    word-wrap: break-word;
+}
