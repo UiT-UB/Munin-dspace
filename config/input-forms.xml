@@ -828,7 +828,7 @@
 		 <dc-schema>dc</dc-schema>
          <dc-element>rights</dc-element>
          <dc-qualifier>holder</dc-qualifier>
-         <repeatable>true</repeatable>
+         <repeatable>false</repeatable>
          <label>Opphavsrett</label>
          <input-type>onebox</input-type>
          <hint></hint>
