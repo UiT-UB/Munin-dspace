@@ -337,17 +337,6 @@
        <field>
 		 <dc-schema>dc</dc-schema>
          <dc-element>rights</dc-element>
-         <dc-qualifier>holder</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Opphavsrett</label>
-         <input-type>onebox</input-type>
-         <hint></hint>
-         <required></required>
-       </field>
-
-       <field>
-		 <dc-schema>dc</dc-schema>
-         <dc-element>rights</dc-element>
          <dc-qualifier>accessRights</dc-qualifier>
          <repeatable></repeatable>
          <label>Tilgangsnivå</label>
@@ -683,17 +672,6 @@
        <field>
 		 <dc-schema>dc</dc-schema>
          <dc-element>rights</dc-element>
-         <dc-qualifier>holder</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Opphavsrett</label>
-         <input-type>onebox</input-type>
-         <hint></hint>
-         <required></required>
-       </field>
-
-       <field>
-		 <dc-schema>dc</dc-schema>
-         <dc-element>rights</dc-element>
          <dc-qualifier>accessRights</dc-qualifier>
          <repeatable></repeatable>
          <label>Tilgangsnivå</label>
@@ -848,6 +826,17 @@
 
        <field>
 		 <dc-schema>dc</dc-schema>
+         <dc-element>rights</dc-element>
+         <dc-qualifier>holder</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Opphavsrett</label>
+         <input-type>onebox</input-type>
+         <hint></hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
          <dc-element>language</dc-element>
          <dc-qualifier>iso</dc-qualifier>
          <repeatable>false</repeatable>
@@ -957,17 +946,6 @@
          <label>Prosjekt-ID</label>
          <input-type>onebox</input-type>
 		 <hint>Skal være på følgende format: info:eu-repo/grantAgreement/Funder/FundingProgram/ProjectNumber/Jurisdiction/ProjectName/ProjectAcronym/</hint>
-         <required></required>
-       </field>
-
-       <field>
-		 <dc-schema>dc</dc-schema>
-         <dc-element>rights</dc-element>
-         <dc-qualifier>holder</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Opphavsrett</label>
-         <input-type>onebox</input-type>
-         <hint></hint>
          <required></required>
        </field>
 
@@ -1124,17 +1102,6 @@
          <label>Samling i Munin</label>
          <input-type value-pairs-name="common_collections">dropdown</input-type>
          <hint>Velg hvilken samling i Munin dette dokumentet skal tilhøre</hint>
-         <required></required>
-       </field>
-
-       <field>
-		 <dc-schema>dc</dc-schema>
-         <dc-element>rights</dc-element>
-         <dc-qualifier>holder</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Opphavsrett</label>
-         <input-type>onebox</input-type>
-         <hint></hint>
          <required></required>
        </field>
 
