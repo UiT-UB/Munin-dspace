@@ -380,7 +380,8 @@
             <div class="navbar navbar-default navbar-static-top" role="navigation">
                 <div class="container">
 		    <!-- KM: Added navbar-background -->
-                    <div class="navbar-header navbar-background">
+						<!--<div class="navbar-header navbar-background">-->
+                    <div class="navbar-header">
 
                         <button type="button" class="navbar-toggle" data-toggle="offcanvas">
                             <span class="sr-only">
@@ -391,10 +392,13 @@
                             <span class="icon-bar"></span>
                         </button>
 
+						<!-- KM: Add wrapper around the two images to keep them together at all times -->
+							<!--<div class="banner-wrapper">-->
+
                         <a href="{$context-path}/" class="navbar-brand">
 			    <!-- KM: Changed logo (navnetrekk)-->
                             <!--<img src="{$theme-path}images/DSpace-logo-line.svg" />-->
-			    <img>
+			    <img class="img-responsive">
 			      <xsl:attribute name="src">
 				<xsl:value-of select="$theme-path"/>
 				<xsl:text>images/uit-navnetrekk-</xsl:text>
@@ -404,6 +408,9 @@
 				</img>
                         </a>
 
+                        <a href="{$context-path}/" class="navbar-brand-bottom ">
+								<img class="img-responsive banner-bottom" src="{$theme-path}images/banner-bottom.png" />
+						</a>
 
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
                         <ul class="nav nav-pills pull-left ">
