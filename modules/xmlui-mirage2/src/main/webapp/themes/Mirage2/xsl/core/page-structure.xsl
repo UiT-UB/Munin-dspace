@@ -433,7 +433,15 @@
                         </a>
 
                         <a href="{$context-path}/" class="navbar-brand-bottom ">
-								<img class="img-responsive banner-bottom" src="{$theme-path}images/banner-bottom.png" />
+								<!--<img class="img-responsive banner-bottom" src="{$theme-path}images/banner-bottom.png" />-->
+								<img class="img-responsive banner-bottom">
+								<xsl:attribute name="src">
+								<xsl:value-of select="$theme-path"/>
+								<xsl:text>images/banner-bottom-</xsl:text>
+								<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']"/>
+								<xsl:text>.png</xsl:text>
+			    		        </xsl:attribute>
+								</img>
 						</a>
 
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
