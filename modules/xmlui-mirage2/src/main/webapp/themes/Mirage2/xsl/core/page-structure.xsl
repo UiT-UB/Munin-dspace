@@ -817,35 +817,51 @@
         <xsl:variable name="ccLogo">
              <xsl:choose>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by/')">
+										   'http://creativecommons.org/licenses/by/') or 
+								  starts-with($ccLicenseUri,
+                                           'https://creativecommons.org/licenses/by/')">
                        <xsl:value-of select="'cc-by.png'" />
                   </xsl:when>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-sa/')">
+                                          'http://creativecommons.org/licenses/by-sa/') or
+								  starts-with($ccLicenseUri,
+										  'https://creativecommons.org/licenses/by-sa/')">
                        <xsl:value-of select="'cc-by-sa.png'" />
                   </xsl:when>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-nd/')">
+										  'http://creativecommons.org/licenses/by-nd/') or
+								  starts-with($ccLicenseUri,
+										  'https://creativecommons.org/licenses/by-nd/')">
                        <xsl:value-of select="'cc-by-nd.png'" />
                   </xsl:when>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-nc/')">
+										  'http://creativecommons.org/licenses/by-nc/') or 
+								  starts-with($ccLicenseUri,
+										  'https://creativecommons.org/licenses/by-nc/')">
                        <xsl:value-of select="'cc-by-nc.png'" />
                   </xsl:when>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-nc-sa/')">
+										  'http://creativecommons.org/licenses/by-nc-sa/') or 
+								  starts-with($ccLicenseUri,
+                                          'https://creativecommons.org/licenses/by-nc-sa/')">
                        <xsl:value-of select="'cc-by-nc-sa.png'" />
                   </xsl:when>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-nc-nd/')">
+										  'http://creativecommons.org/licenses/by-nc-nd/') or
+								  starts-with($ccLicenseUri,
+                                          'https://creativecommons.org/licenses/by-nc-nd/')">
                        <xsl:value-of select="'cc-by-nc-nd.png'" />
                   </xsl:when>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/publicdomain/zero/')">
+										  'http://creativecommons.org/publicdomain/zero/') or
+								  starts-with($ccLicenseUri,
+                                          'https://creativecommons.org/publicdomain/zero/')">
                        <xsl:value-of select="'cc-zero.png'" />
                   </xsl:when>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/publicdomain/mark/')">
+										  'http://creativecommons.org/publicdomain/mark/') or
+								  starts-with($ccLicenseUri,
+                                          'https://creativecommons.org/publicdomain/mark/')">
                        <xsl:value-of select="'cc-mark.png'" />
                   </xsl:when>
                   <xsl:otherwise>
