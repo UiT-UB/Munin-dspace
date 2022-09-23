@@ -837,6 +837,28 @@
          <required></required>
        </field>
 
+	   <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>rights</dc-element>
+         <dc-qualifier>uri</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>CC-lisens</label>
+         <input-type value-pairs-name="common_rightsuri">dropdown</input-type>
+         <hint>Velg aktuell Creative Commons-lisens</hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>rights</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>CC-lisens (tekst)</label>
+         <input-type value-pairs-name="common_rights">dropdown</input-type>
+		 <hint></hint>
+         <required></required>
+       </field>
+
        <field>
 		 <dc-schema>dc</dc-schema>
          <dc-element>language</dc-element>
@@ -1315,6 +1337,68 @@
       <pair>
        <displayed-value>Updated version</displayed-value>
        <stored-value>updatedVersion</stored-value>
+     </pair>
+   </value-pairs>
+
+   <value-pairs value-pairs-name="common_rightsuri" dc-term="rights_uri">
+      <pair>
+       <displayed-value>N/A</displayed-value>
+       <stored-value></stored-value>
+     </pair>
+      <pair>
+       <displayed-value>CC BY</displayed-value>
+       <stored-value>https://creativecommons.org/licenses/by/4.0</stored-value>
+     </pair>
+      <pair>
+       <displayed-value>CC BY-SA</displayed-value>
+       <stored-value>https://creativecommons.org/licenses/by-sa/4.0</stored-value>
+     </pair>
+      <pair>
+       <displayed-value>CC BY-ND</displayed-value>
+       <stored-value>https://creativecommons.org/licenses/by-nd/4.0</stored-value>
+     </pair>
+      <pair>
+       <displayed-value>CC BY-NC</displayed-value>
+       <stored-value>https://creativecommons.org/licenses/by-nc/4.0</stored-value>
+     </pair>
+      <pair>
+       <displayed-value>CC BY-NC-SA</displayed-value>
+       <stored-value>https://creativecommons.org/licenses/by-nc-sa/4.0</stored-value>
+     </pair>
+      <pair>
+       <displayed-value>CC BY-NC-ND</displayed-value>
+       <stored-value>https://creativecommons.org/licenses/by-nc-nd/4.0</stored-value>
+     </pair>
+   </value-pairs>
+
+   <value-pairs value-pairs-name="common_rights" dc-term="rights">
+      <pair>
+       <displayed-value>N/A</displayed-value>
+       <stored-value></stored-value>
+     </pair>
+      <pair>
+       <displayed-value>CC BY</displayed-value>
+       <stored-value>Attribution 4.0 International (CC BY 4.0)</stored-value>
+     </pair>
+      <pair>
+       <displayed-value>CC BY-SA</displayed-value>
+       <stored-value>Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</stored-value>
+     </pair>
+      <pair>
+       <displayed-value>CC BY-ND</displayed-value>
+       <stored-value>Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)</stored-value>
+     </pair>
+      <pair>
+       <displayed-value>CC BY-NC</displayed-value>
+       <stored-value>Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)</stored-value>
+     </pair>
+      <pair>
+       <displayed-value>CC BY-NC-SA</displayed-value>
+       <stored-value>Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</stored-value>
+     </pair>
+      <pair>
+       <displayed-value>CC BY-NC-ND</displayed-value>
+       <stored-value>Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</stored-value>
      </pair>
    </value-pairs>
 

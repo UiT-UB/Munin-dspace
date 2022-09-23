@@ -397,6 +397,15 @@ label[for="aspect_submission_StepTransformer_field_dc_rights_accessRights"] {
 	display: none;
 }
 
+/* Hide CC license text heading/label and selection list from view in input-forms */
+label[for="aspect_submission_StepTransformer_field_dc_rights"] {
+	display: none;
+}
+
+#aspect_submission_StepTransformer_field_dc_rights {
+	display: none;
+}
+
 #footer_feedback .pull-right {
 	text-align: right;
 }
@@ -419,3 +428,4 @@ div.simple-item-view-doi {
 	max-width: 300px;
 	width: 100%;
 }
+
