@@ -142,7 +142,7 @@
 
     <message key="xmlui.discovery.SearchFacetFilter.no-results">Ingen filterverdier funnet</message>
 
-    <message key="xmlui.discovery.AbstractFiltersTransformer.filters.head"></message>
+    <message key="xmlui.discovery.AbstractFiltersTransformer.filters.head">Avgrens</message>
     <message key="xmlui.discovery.AbstractFiltersTransformer.filters.view-more">... mer</message>
 
 

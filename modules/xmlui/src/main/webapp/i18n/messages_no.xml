@@ -305,7 +305,7 @@
 	<message key="xmlui.ArtifactBrowser.ItemViewer.collections">Samlinger</message>
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.Navigation.java -->
-	<message key="xmlui.ArtifactBrowser.Navigation.head_browse"></message>
+	<message key="xmlui.ArtifactBrowser.Navigation.head_browse">Bla</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">Bla i hele Munin</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Enheter og samlinger</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Tittel</message>
