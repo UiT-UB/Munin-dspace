@@ -422,6 +422,10 @@
                         <a href="{$context-path}/" class="navbar-brand">
 			    <!-- KM: Changed logo (navnetrekk)-->
                             <!--<img src="{$theme-path}images/DSpace-logo-line.svg" />-->
+				<xsl:variable name="altTextLogo">
+					<i18n:text>ub.xmlui.mirage2.page-structure.MuninLogo</i18n:text>
+				</xsl:variable>
+
 			    <img class="img-responsive">
 			      <xsl:attribute name="src">
 				<xsl:value-of select="$theme-path"/>
@@ -429,11 +433,19 @@
 				<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']"/>
 				<xsl:text>.png</xsl:text>
 			      </xsl:attribute>
+				<xsl:attribute name="alt">
+					<xsl:value-of select="$altTextLogo"/>
+				</xsl:attribute>
+					
 				</img>
                         </a>
 
                         <a href="{$context-path}/" class="navbar-brand-bottom ">
 								<!--<img class="img-responsive banner-bottom" src="{$theme-path}images/banner-bottom.png" />-->
+								<xsl:variable name="altTextBottom">
+									<i18n:text>ub.xmlui.mirage2.page-structure.openResearchArchiveLogo</i18n:text>
+								</xsl:variable>
+
 								<img class="img-responsive banner-bottom">
 								<xsl:attribute name="src">
 								<xsl:value-of select="$theme-path"/>
@@ -441,6 +453,9 @@
 								<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']"/>
 								<xsl:text>.png</xsl:text>
 			    		        </xsl:attribute>
+								<xsl:attribute name="alt">
+									<xsl:value-of select="$altTextBottom"/>
+								</xsl:attribute>
 								</img>
 						</a>
 
