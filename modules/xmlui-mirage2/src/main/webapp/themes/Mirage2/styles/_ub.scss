@@ -429,3 +429,19 @@ div.simple-item-view-doi {
 	width: 100%;
 }
 
+/* Better accessibility */
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
+	color: #000;
+}
+
+.text-muted {
+	color: #000;
+}
+
+.breadcrumb > .active {
+	color: #333;
+}
+
+.login-info a:link {
+	text-decoration: underline;
+}
