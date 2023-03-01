@@ -12,6 +12,7 @@
 
 body {
 	font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	line-height: 1.5;
 }
 
 .navbar {
@@ -363,13 +364,13 @@ a.front-page-list {
 }
 
 h4 {
-	line-height: 1.3;
+	/*line-height: 1.3;*/
 }
 
 h4.artifact-title {
 	font-size: 18px;
 	margin-bottom: 10px;
-	line-height: 1.3;
+	/*line-height: 1.3;*/
 }
 
 div.artifact-abstract {
@@ -444,4 +445,8 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
 
 .login-info a:link {
 	text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	line-height: 1.5;
 }
