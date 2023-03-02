@@ -153,6 +153,7 @@
                          </div>
 
 			 <!-- KM: Moved both footer divs outside main-container -->
+	<!--
 			 <div class="visible-xs visible-sm">
 			   <xsl:call-template name="buildFooter"/>
 			 </div>
@@ -160,7 +161,8 @@
 			 <div class="hidden-xs hidden-sm">
 			   <xsl:call-template name="buildFooter"/>
 			 </div>
-
+	-->
+			 <xsl:call-template name="buildFooter"/>
 
                         </xsl:otherwise>
                     </xsl:choose>
