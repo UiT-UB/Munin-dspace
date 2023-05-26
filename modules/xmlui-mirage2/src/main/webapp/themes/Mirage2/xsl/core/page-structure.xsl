@@ -425,7 +425,7 @@
 			    <!-- KM: Changed logo (navnetrekk)-->
                             <!--<img src="{$theme-path}images/DSpace-logo-line.svg" />-->
 				<xsl:variable name="altTextLogo">
-					<i18n:text>ub.xmlui.mirage2.page-structure.MuninLogo</i18n:text>
+					<i18n:text>ub.xmlui.mirage2.page-structure.muninLogo</i18n:text>
 				</xsl:variable>
 
 			    <img class="img-responsive">
@@ -1226,10 +1226,10 @@
         </xsl:choose>
     </xsl:template>
 
-    <!-- KM: This inline JS redirects to ldap-login from the login chooser page -->
+    <!-- KM: This inline JS redirects to shibboleth-login from the login chooser page -->
     <xsl:template name="loginChooserRedirect">
       <script type="text/javascript">
-		  window.location = "/munin/ldap-login";
+		  window.location = "/munin/shibboleth-login";
       </script>
     </xsl:template>
 
