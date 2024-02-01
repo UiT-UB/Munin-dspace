@@ -168,8 +168,6 @@
                     </xsl:choose>
                     <!-- Javascript at the bottom for fast page loading -->
                     <xsl:call-template name="addJavascript"/>
-					<!-- KM: Statcounter code -->
-					<xsl:call-template name="statcounterCode"/>	
                 </body>
                 <xsl:text disable-output-escaping="yes">&lt;/html&gt;</xsl:text>
 
@@ -1232,29 +1230,5 @@
 		  window.location = "/munin/shibboleth-login";
       </script>
     </xsl:template>
-
-	<!-- KM: The Statcounter code -->
-	<xsl:template name="statcounterCode">
-<!-- Default Statcounter code for Munin https://munin.uit.no
--->
-<script type="text/javascript">
-	<xsl:text disable-output-escaping="yes">
-var sc_project=2075631; 
-var sc_invisible=0; 
-var sc_security="d055f082"; 
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-<![CDATA[document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");]]>
-	</xsl:text>
-</script>
-<noscript><div class="statcounter"><a title="site stats"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="//c.statcounter.com/2075631/0/d055f082/0/" alt="site
-stats"/></a></div></noscript>
-<!-- End of Statcounter Code -->
-	</xsl:template>
 
 </xsl:stylesheet>
