@@ -1,8 +1,8 @@
 # The FULL URL to the DSpace sitemaps
-# The ${dspace.url} will be auto-filled with the value in dspace.cfg
+# The https://munin.uit.no will be auto-filled with the value in dspace.cfg
 # XML sitemap is listed first as it is preferred by most search engines
-Sitemap: ${dspace.url}/sitemap
-Sitemap: ${dspace.url}/htmlmap
+Sitemap: https://munin.uit.no/sitemap
+Sitemap: https://munin.uit.no/htmlmap
 
 ##########################
 # Default Access Group
@@ -10,8 +10,8 @@ Sitemap: ${dspace.url}/htmlmap
 ##########################
 User-agent: *
 # Disable access to Discovery search and filters
-Disallow: /discover
-Disallow: /search-filter
+Disallow: /*discover
+Disallow: /*search-filter
 #
 # Optionally uncomment the following line ONLY if sitemaps are working
 # and you have verified that your site is being indexed correctly.
@@ -19,15 +19,15 @@ Disallow: /browse
 #
 # If you have configured DSpace (Solr-based) Statistics to be publicly 
 # accessible, then you may not want this content to be indexed
-# Disallow: /statistics
+Disallow: /*statistics
 #
 # You also may wish to disallow access to the following paths, in order
 # to stop web spiders from accessing user-based content
-# Disallow: /contact
-# Disallow: /feedback
-# Disallow: /forgot
-# Disallow: /login
-# Disallow: /register
+Disallow: /contact
+Disallow: /feedback
+Disallow: /forgot
+Disallow: /login
+Disallow: /register
 
 
 ##############################
