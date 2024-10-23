@@ -647,6 +647,13 @@ public class WorkflowManager
 	        tempItem.clearMetadata("dc", "identifier", "uri", Item.ANY);
 	        tempItem.clearMetadata("dc", "description", "contact", Item.ANY);
 	        tempItem.clearMetadata("dc", "description", "publishcomments", Item.ANY);
+			// Remove course code for doctoral theses
+			Metadatum[] courseCodes = tempItem.getMetadata("dc", "subject", "courseID", Item.ANY);
+			if(courseCodes.length > 0){
+				if(courseCodes[0].value.startsWith("DOKTOR") == true){
+					tempItem.clearMetadata("dc", "subject", "courseID", Item.ANY);
+				}
+			}
 	        tempItem.update();
 	        //KME
 
